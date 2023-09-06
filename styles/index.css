@@ -1,0 +1,55 @@
+@import url("./reset.min.css");
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --orange: orange;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 20px;
+  transition: .3s ease;
+}
+
+.slider-controls {
+  background-color: transparent;
+  position: absolute;
+  height: 50vh;
+  min-height: 320px;
+  width: 70vw;
+  max-width: 720px;
+  box-shadow: -2px -2px 5px 100vh rgba(0, 0, 0, 0.6);
+}
+
+.slider-btn {
+  background-color: transparent;
+  border: 2px solid var(--orange);
+  position: absolute;
+  color: var(--white);
+  top: 50%;
+  font-size: 50px;
+  line-height: 0;
+  transform: translateY(-50%) translateX(-100%);
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+}
+
+.slider-btn .material-symbols-outlined {
+  font-size: inherit;
+}
+
+.slider-btn[data-action="next"] {
+  right: 0;
+  transform: translateY(-50%) translateX(100%);
+}
